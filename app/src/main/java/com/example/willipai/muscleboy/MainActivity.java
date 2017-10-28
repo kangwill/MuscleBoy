@@ -13,7 +13,7 @@ public class MainActivity extends Activity {
     public ImageButton bodyBut;
 
         public void init(){
-            bodyBut = findViewById(R.id.imageButton5);
+            bodyBut = (ImageButton)findViewById(R.id.imageButton5);
             bodyBut.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
             });
         }
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
