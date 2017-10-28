@@ -14,16 +14,17 @@
         android:orientation="vertical"
         android:weightSum="3">
 
+
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/imageButton24"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            android:src="@drawable/button_1" />
+            android:src="@drawable/button_3" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/imageButton23"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -31,11 +32,11 @@
             android:src="@drawable/button_2" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/imageButton22"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            android:src="@drawable/button_3" />
+            android:src="@drawable/button_1" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

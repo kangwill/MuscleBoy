@@ -13,7 +13,7 @@ public class MainActivity extends Activity {
     public ImageButton bodyBut;
 
         public void init(){
-            bodyBut = (ImageButton)findViewById(R.id.imageButton5);
+            bodyBut = findViewById(R.id.imageButton24);
             bodyBut.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
