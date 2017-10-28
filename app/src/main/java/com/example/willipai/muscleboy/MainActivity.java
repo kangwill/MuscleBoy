@@ -7,17 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends Activity {
 
-    public Button bodyBut;
+    public ImageButton bodyBut;
 
         public void init(){
-            bodyBut = findViewById(R.id.bodyBut);
+            bodyBut = findViewById(R.id.button1);
             bodyBut.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent first = new Intent("Body");
+                    Intent first = new Intent(MainActivity.this, Body.class);
                     startActivity(first);
                 }
             });
