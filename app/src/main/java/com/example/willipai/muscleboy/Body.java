@@ -1,13 +1,14 @@
 package com.example.willipai.muscleboy;
 
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 
-/**
- * Created by Willipai on 10/28/17.
- */
+public class Body extends AppCompatActivity {
 
-public class Body extends Activity {
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_body);
+    }
 }
