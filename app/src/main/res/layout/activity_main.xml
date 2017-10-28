@@ -14,22 +14,15 @@
         android:orientation="vertical"
         android:weightSum="3">
 
-
         <ImageButton
             android:id="@+id/imageButton7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            android:src="@mipmap/body" />
+            android:onClick="move_to_body"
+            android:src="@drawable/body" />
 
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:scaleType="fitXY"
-            android:src="@mipmap/setting" />
 
         <ImageButton
             android:id="@+id/imageButton8"
@@ -37,6 +30,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            android:src="@mipmap/journal" />
+            android:src="@drawable/journal" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/setting" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
