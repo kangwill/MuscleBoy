@@ -14,7 +14,7 @@ public class Body extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_body);
-        ImageView abs = (ImageView)findViewById(R.id.imageView55);
+        ImageView abs = (ImageView)findViewById(R.id.abs);
         abs.setColorFilter(WHITE, PorterDuff.Mode.MULTIPLY);
     }
 }
