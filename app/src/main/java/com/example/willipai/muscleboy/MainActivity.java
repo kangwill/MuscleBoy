@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
             bodyBut.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent first = new Intent(MainActivity.this, Body.class);
+                    Intent first = new Intent("Body");
                     startActivity(first);
                 }
             });
