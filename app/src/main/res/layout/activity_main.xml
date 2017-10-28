@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            app:srcCompat="@mipmap/body" />
+            android:src="@mipmap/body" />
 
         <ImageButton
             android:id="@+id/imageButton9"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            app:srcCompat="@mipmap/setting" />
+            android:src="@mipmap/setting" />
 
         <ImageButton
             android:id="@+id/imageButton8"
@@ -37,6 +37,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            app:srcCompat="@mipmap/journal" />
+            android:src="@mipmap/journal" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
