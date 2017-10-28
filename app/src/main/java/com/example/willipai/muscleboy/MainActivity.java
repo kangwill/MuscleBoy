@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         }
 
         //hi HAHAHAHHAa
-	//no, this is Kalpan, howdy bro
+	//no, this is Kalpan, howdy broasdas
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
