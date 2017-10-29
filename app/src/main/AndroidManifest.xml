@@ -23,7 +23,9 @@
         <activity android:name=".Setting" />
         <activity android:name=".QuestionActivity" />
         <activity android:name=".Ab" />
-        <activity android:name=".Calf"></activity>
+        <activity android:name=".Calf" />
+        <activity android:name=".Glute" />
+        <activity android:name=".Hamstring"></activity>
     </application>
 
 </manifest>

@@ -39,7 +39,7 @@ import static com.example.willipai.muscleboy.R.id.upperback;
 public class BackBody extends Activity {
 
     private static SeekBar seek_bar;
-    private static TextView text_view;
+    public static TextView text_view;
     public Button frontView;
     private Button workout;
     static int progress_val;
@@ -102,21 +102,15 @@ public class BackBody extends Activity {
                     public void onStopTrackingTouch(SeekBar seekBar) {
                         if(progress_val > 0 && progress_val < 15){
                             text_view.setText("Calf");
-                            try {
-                                Thread.sleep(5000);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                            Intent intent = new Intent(BackBody.this, Calf.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                            startActivity(intent);
-                            finish();
+                            
                         }
                         if(progress_val > 14 && progress_val < 29){
                             text_view.setText("Glute");
+                            
                         }
                         if(progress_val > 28 && progress_val < 44){
                             text_view.setText("Hamstring");
+                            
                         }
                         if(progress_val > 43 && progress_val < 58){
                             text_view.setText("Infraspinatus");

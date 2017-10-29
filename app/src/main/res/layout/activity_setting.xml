@@ -8,17 +8,47 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="288dp"
-        android:layout_height="61dp"
-        android:text="In the application, you select the workout cycle, the short term training cycle for you. Select a number from the drop down menu"
+        android:layout_width="324dp"
+        android:layout_height="149dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginStart="17dp"
+        android:text="@string/information"
+        android:textSize="24sp"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="30dp" />
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="302dp"
-        android:layout_height="30dp"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="109dp" />
+
+        android:layout_width="313dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/submitButton1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/submitButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="244dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="8dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+
+
 </android.support.constraint.ConstraintLayout>
