@@ -2,6 +2,7 @@ package com.example.willipai.muscleboy;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -9,6 +10,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.util.Date;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -21,30 +25,31 @@ public class MainActivity extends Activity {
     public Button questionButton;
     public ImageButton settingsButton;
     String nameExcercise;
-    String wordStr;
     String[] muscleGroupData;
     String temp;
     ArrayList<Excercise> excercisesList;
+    /*Next data item used elsewhere*/
+    static int userCount;
+    Date startingDay;
+    Date today;
     public void init()
     {
         excercisesList = new ArrayList<Excercise>();
         Scanner s;
+        /*possibly safer initialization*/
+        s = null;
         try
         {
             s = new Scanner(getResources().openRawResource(R.raw.rawexcerciseinput));
-            if(s==null)
-            {
-                throw new IOException("File not opened");
-            }
         }
-        catch(IOException ioExceptionE)
+        catch(Resources.NotFoundException e)
         {
-            System.exit(-1);
-            return;
+            //
         }
 
 
-        bodyBut = (ImageButton)findViewById(R.id.imageButton3);
+        bodyBut = findViewById(R.id.imageButton3);
+
         bodyBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +93,7 @@ public class MainActivity extends Activity {
             if(temp != null)
             {
                 muscleGroupData = temp.split(" ");
-                if(muscleGroupData != null && muscleGroupData.length != 0)
+                if(muscleGroupData.length != 0)
                 {
                     excercisesList.add(new Excercise(nameExcercise, muscleGroupData));
                 }
@@ -99,6 +104,31 @@ public class MainActivity extends Activity {
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
+        today = new Date();
+        InputStream ins;
+        ObjectInputStream ois;
+        try
+            {
+                ins = getResources().openRawResource(R.raw.profilingdata);
+                ois = new ObjectInputStream(ins);
+                startingDay = (Date) ois.readObject();
+                userCount = ois.readInt();
+            }
+        catch(Resources.NotFoundException e)
+        {
+            /*setting startingToday as today*/
+            startingDay = today;
+        }
+        catch(IOException e)
+        {
+            startingDay = today;
+            userCount = 0;
+        }
+
+        catch(ClassNotFoundException e)
+        {startingDay = today;
+        userCount = 0;
+        }
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
