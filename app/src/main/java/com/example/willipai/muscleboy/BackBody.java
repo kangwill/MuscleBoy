@@ -43,7 +43,6 @@ public class BackBody extends Activity {
     public Button frontView;
     private Button workout;
     static int progress_val;
-
     public void init() {
         frontView = (Button) findViewById(R.id.button4);
         frontView.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +68,7 @@ public class BackBody extends Activity {
                         progress_val = progress;
                         if(progress_val > 0 && progress_val < 15){
                             text_view.setText("Calf");
+                            UserPreference.userPreference = "Calf";
                         }
                         if(progress_val > 14 && progress_val < 29){
                             text_view.setText("Glute");
@@ -127,6 +127,11 @@ public class BackBody extends Activity {
                         if(progress_val > 89 && progress_val < 101){
                             text_view.setText("UpperBack");
                         }
+                        Intent intent = new Intent(BackBody.this, ExcerciseActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        UserPreference.userPreference = text_view.getText().toString();
+                        startActivity(intent);
+                        finish();
                     }
                 }
         );
