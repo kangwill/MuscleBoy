@@ -22,8 +22,6 @@
         <activity android:name=".BackBody" />
         <activity android:name=".Setting" />
         <activity android:name=".QuestionActivity" />
-        <activity android:name=".Setting" />
-        <activity android:name=".QuestionActivity" />
         <activity android:name=".ExcerciseActivity"></activity>
     </application>
 

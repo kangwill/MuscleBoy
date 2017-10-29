@@ -8,7 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 import static com.example.willipai.muscleboy.MainActivity.excercisesList;
@@ -17,12 +16,10 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
 {
     static ArrayAdapter<Excercise> excercisesData;
     Button submitButton;
-    //excercisesData = new ArrayAdapter<Excercise>( getApplicationContext(), )
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excercise);
-        filterExcercises();
         submitButton = (Button) findViewById(R.id.button5);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,8 +27,11 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
                 Log l = new Log();
                 l.date = new Date();
                 l.muscleGrp = UserPreference.userPreference;
+                /*left to code*/
             }
-        })
+        });
+        filterExcercises();
+
     }
 
     public void filterExcercises()
@@ -45,22 +45,27 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
         Spinner view;
 
         nTotalExcerises = excercisesList.size();
-        for(int i = 0; i < nTotalExcerises; i++)
+        for (int i = 0; i < nTotalExcerises; i++)
+        {
+            currentExcercise = excercisesList.get(i);
+            temp = currentExcercise.muscleGroups.length;
+            temp2 = UserPreference.userPreference;
+
+            for (int j = 0; j < temp; j++)
             {
-                    currentExcercise = excercisesList.get(i);
-                    temp = currentExcercise.muscleGroups.length;
-                    temp2 = text_view.getText();
-                    for(int j = 0; j < temp; j++)
-                        {
-                            if(currentExcercise.muscleGroups[j].equals(temp2))
-                                {
-                                    excercisesData.add(currentExcercise);
-                                    break;
-                                }
-                        }
+                if (currentExcercise.muscleGroups[j].equals(temp2))
+                {
+                    excercisesData.add(currentExcercise);
+                    break;
+                }
             }
-        view = new Spinner(getApplicationContext());
+
+        }
+
+        view = (Spinner) findViewById(R.id.spinner2);
         view.setAdapter(excercisesData);
+    }
+
     public void onItemSelected(AdapterView parent, View view, int position, long id)
     {
 
@@ -69,5 +74,5 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
     {
 
     }
-}
+
 }
