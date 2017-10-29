@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.willipai.muscleboy.Setting">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="288dp"
+        android:layout_height="61dp"
+        android:text="In the application, you select the workout cycle, the short term training cycle for you. Select a number from the drop down menu"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="302dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="109dp" />
+</android.support.constraint.ConstraintLayout>
