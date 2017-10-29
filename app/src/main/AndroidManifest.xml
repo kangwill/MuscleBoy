@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Body" />
-        <activity android:name=".Journal"></activity>
+        <activity android:name=".Journal" />
+        <activity android:name=".BackBody"></activity>
     </application>
 
 </manifest>

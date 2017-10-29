@@ -16,88 +16,68 @@
         app:layout_constraintRight_toRightOf="parent">
 
         <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/front" />
+
+        <ImageView
             android:id="@+id/chest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:alpha="0"
             android:src="@drawable/chest" />
 
         <ImageView
             android:id="@+id/abs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:alpha="0"
             android:src="@drawable/abs" />
-
-        <ImageView
-            android:id="@+id/left_bicep"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/left_biceps" />
-
-        <ImageView
-            android:id="@+id/left_deltroid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/left_deltoids" />
-
-        <ImageView
-            android:id="@+id/left_forearm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/left_forearm" />
-
-        <ImageView
-            android:id="@+id/left_oblique"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/left_obliques" />
-
-        <ImageView
-            android:id="@+id/left_quad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/left_quads" />
-
-        <ImageView
-            android:id="@+id/left_tib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/left_tib" />
 
         <ImageView
             android:id="@+id/right_bicep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/right_biceps" />
+            android:alpha="0"
+            android:src="@drawable/biceps" />
 
         <ImageView
             android:id="@+id/right_deltoid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/right_deltoids" />
+            android:alpha="0"
+            android:src="@drawable/deltoids" />
 
         <ImageView
             android:id="@+id/right_forearm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/right_forearm" />
+            android:alpha="0"
+            android:src="@drawable/forearms" />
 
         <ImageView
             android:id="@+id/right_oblique"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/right_obliques" />
+            android:alpha="0"
+            android:elevation="15dp"
+            android:src="@drawable/obliques" />
 
         <ImageView
             android:id="@+id/right_quad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/right_quads" />
+            android:alpha="0"
+            android:src="@drawable/quads" />
 
-        <ImageView
-            android:id="@+id/right_tib"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/right_tib" />
+            android:text="Back View"
+            android:textColor="@android:color/background_light" />
 
     </FrameLayout>
 </android.support.constraint.ConstraintLayout>
