@@ -20,6 +20,7 @@
         <activity android:name=".Body" />
         <activity android:name=".Journal" />
         <activity android:name=".BackBody" />
+        <activity android:name=".abs"></activity>
         <activity android:name=".Setting" />
         <activity android:name=".QuestionActivity" />
     </application>

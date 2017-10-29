@@ -10,7 +10,6 @@ import android.widget.ImageButton;
 
 public class Body extends Activity{
 
-
     public Button backView;
 
     public void init() {
@@ -18,7 +17,7 @@ public class Body extends Activity{
         backView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Body.this, BackBody.class);
+                Intent intent = new Intent(Body.this, BackBody.class);// New activity
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 finish();
