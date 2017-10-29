@@ -11,15 +11,6 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import static com.example.willipai.muscleboy.R.id.abs1;
-import static com.example.willipai.muscleboy.R.id.chest1;
-import static com.example.willipai.muscleboy.R.id.right_bicep;
-import static com.example.willipai.muscleboy.R.id.right_deltoid;
-import static com.example.willipai.muscleboy.R.id.right_forearm;
-import static com.example.willipai.muscleboy.R.id.right_oblique;
-import static com.example.willipai.muscleboy.R.id.right_quad;
-import static com.example.willipai.muscleboy.R.id.tibs;
-
 public class Body extends Activity{
 
     private static SeekBar seek_bar;
