@@ -24,15 +24,7 @@ public class Body extends Activity{
 
     private static SeekBar seek_bar;
     private static TextView text_view;
-    private static ImageView deltoid;
-    private static ImageView chest;
-    private static ImageView bicep;
-    private static ImageView oblique;
-    private static ImageView abs;
-    private static ImageView forearm;
-    private static ImageView quad;
-    private static ImageView tib;
-    private static int num1, num2;
+
 
     public Button backView;
 
@@ -50,15 +42,6 @@ public class Body extends Activity{
     }
 
     public void magicLamp(){
-        deltoid = (ImageView) findViewById(right_deltoid);
-        chest = (ImageView) findViewById(chest1);
-        bicep = (ImageView) findViewById(right_bicep);
-        oblique = (ImageView) findViewById(right_oblique);
-        abs = (ImageView) findViewById(abs1);
-        forearm = (ImageView) findViewById(right_forearm);
-        quad = (ImageView) findViewById(right_quad);
-        tib = (ImageView) findViewById(tibs);
-
         text_view = (TextView)findViewById(R.id.textView7);
         text_view.setText("Muscle");
         seek_bar = (SeekBar)findViewById(R.id.seekBar);
