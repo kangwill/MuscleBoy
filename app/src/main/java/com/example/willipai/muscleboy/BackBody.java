@@ -57,24 +57,6 @@ public class BackBody extends Activity {
         });
     }
 
-    public void go(){
-        workout = (Button) findViewById(R.id.button7);
-        workout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Class cl = null;
-                try {
-                    Intent intent = new Intent(BackBody.this, Class.forName(text_view.getText().toString()));
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-                    finish();
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
-
     public void magicLamp(){
 
         text_view = (TextView)findViewById(R.id.textView4);
@@ -120,6 +102,15 @@ public class BackBody extends Activity {
                     public void onStopTrackingTouch(SeekBar seekBar) {
                         if(progress_val > 0 && progress_val < 15){
                             text_view.setText("Calf");
+                            try {
+                                Thread.sleep(5000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            Intent intent = new Intent(BackBody.this, Calf.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            finish();
                         }
                         if(progress_val > 14 && progress_val < 29){
                             text_view.setText("Glute");
@@ -152,7 +143,6 @@ public class BackBody extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_back_body);
         magicLamp();
-        go();
         init();
         }
 }

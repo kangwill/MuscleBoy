@@ -22,7 +22,8 @@
         <activity android:name=".BackBody" />
         <activity android:name=".Setting" />
         <activity android:name=".QuestionActivity" />
-        <activity android:name=".Ab"></activity>
+        <activity android:name=".Ab" />
+        <activity android:name=".Calf"></activity>
     </application>
 
 </manifest>

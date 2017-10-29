@@ -41,29 +41,6 @@ public class Body extends Activity{
         });
     }
 
-    public void go(){
-        workout = (Button) findViewById(R.id.button6);
-        workout.setOnClickListener(new View.OnClickListener() {
-            Class cl;
-            String muscle = text_view.getText().toString();
-            if(muscle == ("Ab"))
-            {
-
-            }
-            @Override
-            public void onClick(View p) {
-                try {
-                    Intent intent = new Intent(Body.this, cl);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-                    finish();
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
-
     public void magicLamp(){
         text_view = (TextView)findViewById(R.id.textView7);
         text_view.setText("Move me");
@@ -106,6 +83,7 @@ public class Body extends Activity{
                     public void onStopTrackingTouch(SeekBar seekBar) {
                         if(progress_val > 0 && progress_val < 15){
                             text_view.setText("Deltoid");
+
                         }
                         if(progress_val > 14 && progress_val < 29){
                             text_view.setText("Chest");
@@ -136,7 +114,6 @@ public class Body extends Activity{
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_body);
         magicLamp();
-        go();
         init();
     }
 }
