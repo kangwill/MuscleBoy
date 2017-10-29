@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.io.IOException;
@@ -17,7 +18,7 @@ public class MainActivity extends Activity {
     /*buttons*/
     public ImageButton bodyBut;
     public ImageButton journalButton;
-    public ImageButton questionButton;
+    public Button questionButton;
     public ImageButton settingsButton;
     String nameExcercise;
     String wordStr;
@@ -60,7 +61,26 @@ public class MainActivity extends Activity {
                 startActivity(journalIntent);
             }
         });
-
+        settingsButton = findViewById(R.id.imageButton2);
+        settingsButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent settingsActivity = new Intent(MainActivity.this, Setting.class);
+                startActivity(settingsActivity);
+            }
+        });
+        questionButton = findViewById(R.id.button2);
+        questionButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent questionsActivity = new Intent(MainActivity.this, QuestionActivity.class);
+                startActivity(questionsActivity);
+            }
+        });
         while(s.hasNext())
         {
             nameExcercise = s.next();
