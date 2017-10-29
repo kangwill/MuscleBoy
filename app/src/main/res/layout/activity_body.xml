@@ -7,6 +7,28 @@
     android:background="@android:color/black"
     tools:context="com.example.willipai.muscleboy.Body">
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="34dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
     <FrameLayout
         android:id="@+id/frame1"
         android:layout_width="368dp"
@@ -23,39 +45,25 @@
             android:src="@drawable/front" />
 
         <ImageView
-            android:id="@+id/chest"
+            android:id="@+id/right_deltoid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:src="@drawable/deltoids" />
+
+        <ImageView
+            android:id="@+id/chest1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0"
             android:src="@drawable/chest" />
 
         <ImageView
-            android:id="@+id/abs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0"
-            android:src="@drawable/abs" />
-
-        <ImageView
             android:id="@+id/right_bicep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:alpha="0"
+            android:alpha="1"
             android:src="@drawable/biceps" />
-
-        <ImageView
-            android:id="@+id/right_deltoid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0"
-            android:src="@drawable/deltoids" />
-
-        <ImageView
-            android:id="@+id/right_forearm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0"
-            android:src="@drawable/forearms" />
 
         <ImageView
             android:id="@+id/right_oblique"
@@ -65,17 +73,38 @@
             android:src="@drawable/obliques" />
 
         <ImageView
+            android:id="@+id/abs1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:src="@drawable/abs" />
+
+        <ImageView
+            android:id="@+id/right_forearm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:src="@drawable/forearms" />
+
+        <ImageView
             android:id="@+id/right_quad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0"
             android:src="@drawable/quads" />
 
+        <ImageView
+            android:id="@+id/tibs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            app:srcCompat="@drawable/tibs" />
+
         <Button
             android:id="@+id/button3"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="94dp"
             android:text="See Back View"
             android:textColor="@android:color/background_light" />
 
