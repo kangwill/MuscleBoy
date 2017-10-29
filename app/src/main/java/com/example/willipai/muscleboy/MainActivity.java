@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
     String nameExcercise;
     String[] muscleGroupData;
     String temp;
-    ArrayList<Excercise> excercisesList;
+    public static ArrayList<Excercise> excercisesList;
     /*Next data item used elsewhere*/
     static int userCount;
     Date startingDay;

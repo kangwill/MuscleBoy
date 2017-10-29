@@ -20,19 +20,11 @@
         <activity android:name=".Body" />
         <activity android:name=".Journal" />
         <activity android:name=".BackBody" />
-<<<<<<< HEAD
         <activity android:name=".Setting" />
         <activity android:name=".QuestionActivity" />
-        <activity android:name=".Ab" />
-        <activity android:name=".Calf" />
-        <activity android:name=".Glute" />
-        <activity android:name=".Hamstring"></activity>
-=======
-        <activity android:name=".abs" />
         <activity android:name=".Setting" />
         <activity android:name=".QuestionActivity" />
         <activity android:name=".ExcerciseActivity"></activity>
->>>>>>> ed91981b638a97c112bd70d2095b1dc39a78e2af
     </application>
 
 </manifest>
