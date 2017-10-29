@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.willipai.muscleboy.Journal">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is the journal page"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="194dp" />
 </android.support.constraint.ConstraintLayout>
