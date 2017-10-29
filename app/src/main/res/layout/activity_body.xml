@@ -61,7 +61,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0"
-            android:elevation="15dp"
             android:src="@drawable/obliques" />
 
         <ImageView
@@ -76,7 +75,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back View"
+            android:text="See Back View"
             android:textColor="@android:color/background_light" />
 
     </FrameLayout>
