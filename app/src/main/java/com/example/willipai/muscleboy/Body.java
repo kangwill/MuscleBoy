@@ -23,7 +23,7 @@ import static com.example.willipai.muscleboy.R.id.tibs;
 public class Body extends Activity{
 
     private static SeekBar seek_bar;
-    private static TextView text_view;
+    public static TextView text_view;
     static int progress_val;
     private Button workout;
     public Button backView;
@@ -83,7 +83,6 @@ public class Body extends Activity{
                     public void onStopTrackingTouch(SeekBar seekBar) {
                         if(progress_val > 0 && progress_val < 15){
                             text_view.setText("Deltoid");
-
                         }
                         if(progress_val > 14 && progress_val < 29){
                             text_view.setText("Chest");
@@ -103,6 +102,10 @@ public class Body extends Activity{
                         if(progress_val > 89 && progress_val < 101){
                             text_view.setText("Tib");
                         }
+                        Intent intent = new Intent(Body.this, ExcerciseActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        finish();
                     }
                 }
         );
