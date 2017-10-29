@@ -3,11 +3,11 @@ package com.example.willipai.muscleboy;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class abs extends AppCompatActivity {
+public class Ab extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abs);
+        setContentView(R.layout.activity_ab);
     }
 }

@@ -24,8 +24,8 @@ public class Body extends Activity{
 
     private static SeekBar seek_bar;
     private static TextView text_view;
-
-
+    static int progress_val;
+    private Button workout;
     public Button backView;
 
     public void init() {
@@ -41,13 +41,35 @@ public class Body extends Activity{
         });
     }
 
+    public void go(){
+        workout = (Button) findViewById(R.id.button6);
+        workout.setOnClickListener(new View.OnClickListener() {
+            Class cl;
+            String muscle = text_view.getText().toString();
+            if(muscle == ("Ab"))
+            {
+
+            }
+            @Override
+            public void onClick(View p) {
+                try {
+                    Intent intent = new Intent(Body.this, cl);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
     public void magicLamp(){
         text_view = (TextView)findViewById(R.id.textView7);
-        text_view.setText("Muscle");
+        text_view.setText("Move me");
         seek_bar = (SeekBar)findViewById(R.id.seekBar);
         seek_bar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
-                    int progress_val;
                     @Override
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         progress_val = progress;
@@ -65,7 +87,7 @@ public class Body extends Activity{
                             text_view.setText("Oblique");
                         }
                         if(progress_val > 55 && progress_val < 72){
-                            text_view.setText("Abs");
+                            text_view.setText("Ab");
                         }
                         if(progress_val > 67 && progress_val < 85){
                             text_view.setText("Forearm");
@@ -95,7 +117,7 @@ public class Body extends Activity{
                             text_view.setText("Oblique");
                         }
                         if(progress_val > 55 && progress_val < 72){
-                            text_view.setText("Abs");
+                            text_view.setText("Ab");
                         }
                         if(progress_val > 67 && progress_val < 85){
                             text_view.setText("Forearm");
@@ -114,6 +136,7 @@ public class Body extends Activity{
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_body);
         magicLamp();
+        go();
         init();
     }
 }
