@@ -11,7 +11,7 @@ public class Log implements Serializable{
     public int reps;
     public float weight;
     public Date date;
-    public Excercise excercise;
     public String muscleGrp;
+    public String excercise;
 
 }

@@ -24,17 +24,17 @@ public class MainActivity extends Activity {
     public ImageButton journalButton;
     public Button questionButton;
     public ImageButton settingsButton;
-    String nameExcercise;
-    String[] muscleGroupData;
+    String muscleGrpName;
+    String[] excerciseData;
     String temp;
-    public static ArrayList<Excercise> excercisesList;
+    public static ArrayList<MuscleGrp> muscleGrpsList;
     /*Next data item used elsewhere*/
     static int userCount;
     Date startingDay;
     Date today;
     public void init()
     {
-        excercisesList = new ArrayList<Excercise>();
+        muscleGrpsList = new ArrayList<MuscleGrp>();
         Scanner s;
         /*possibly safer initialization*/
         s = null;
@@ -88,14 +88,14 @@ public class MainActivity extends Activity {
         });
         while(s.hasNext())
         {
-            nameExcercise = s.next();
+            muscleGrpName = s.next();
             temp = s.nextLine();
             if(temp != null)
             {
-                muscleGroupData = temp.split(" ");
-                if(muscleGroupData.length != 0)
+                excerciseData = temp.split(" ");
+                if(excerciseData.length != 0)
                 {
-                    excercisesList.add(new Excercise(nameExcercise, muscleGroupData));
+                    muscleGrpsList.add(new MuscleGrp(muscleGrpName, excerciseData));
                 }
             }
         }

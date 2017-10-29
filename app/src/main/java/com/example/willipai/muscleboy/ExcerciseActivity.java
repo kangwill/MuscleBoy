@@ -10,14 +10,17 @@ import android.widget.Spinner;
 
 import java.util.Date;
 
-import static com.example.willipai.muscleboy.MainActivity.excercisesList;
+import static com.example.willipai.muscleboy.MainActivity.muscleGrpsList;
 
 public class ExcerciseActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener
 {
-    static ArrayAdapter<Excercise> excercisesData;
-    Button submitButton;
+    static ArrayAdapter<String> excercises;
+    static MuscleGrp m;
+
+    static Spinner view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button submitButton;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excercise);
         submitButton = (Button) findViewById(R.id.button5);
@@ -27,6 +30,7 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
                 Log l = new Log();
                 l.date = new Date();
                 l.muscleGrp = UserPreference.userPreference;
+                //l.excercise = view.
                 /*left to code*/
             }
         });
@@ -36,34 +40,27 @@ public class ExcerciseActivity extends AppCompatActivity implements AdapterView.
 
     public void filterExcercises()
     {
-        excercisesData = new ArrayAdapter<Excercise>(getApplicationContext(), R.layout.adapater_aid_kalpan, R.id.textView4);
-        int nTotalExcerises;
-        int nExcercises;
-        int temp;
-        String temp2;
-        Excercise currentExcercise;
-        Spinner view;
-
-        nTotalExcerises = excercisesList.size();
-        for (int i = 0; i < nTotalExcerises; i++)
-        {
-            currentExcercise = excercisesList.get(i);
-            temp = currentExcercise.muscleGroups.length;
-            temp2 = UserPreference.userPreference;
-
-            for (int j = 0; j < temp; j++)
+        excercises = new ArrayAdapter<String>(getApplicationContext(), R.layout.adapater_aid_kalpan, R.id.textView4);
+        for(int i = 0; i < muscleGrpsList.size(); i++)
             {
-                if (currentExcercise.muscleGroups[j].equals(temp2))
+                if((muscleGrpsList.get(i).toString()).equals(UserPreference.userPreference))
                 {
-                    excercisesData.add(currentExcercise);
+                    m = muscleGrpsList.get(i);
                     break;
                 }
             }
+        if(m != null && m.excercies != null)
+        {
+            for(int i = 0; i < m.excercies.length; i++)
+            {
 
+                excercises.add(m.excercies[i]);
+
+            }
         }
 
         view = (Spinner) findViewById(R.id.spinner2);
-        view.setAdapter(excercisesData);
+        view.setAdapter(excercises);
     }
 
     public void onItemSelected(AdapterView parent, View view, int position, long id)

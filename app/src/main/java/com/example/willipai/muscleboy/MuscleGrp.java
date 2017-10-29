@@ -6,17 +6,14 @@ import java.util.Date;
  * Created by kalpanjasani on 10/28/17.
  */
 
-public class Excercise {
+public class MuscleGrp {
     String name;
-    String[] muscleGroups;
-    int reps;
-    double weight;
-    Date date;
+    String[] excercies;
 
-    public Excercise(String name, String[] muscleGroups)
+    public MuscleGrp(String name, String[] excercies)
     {
         this.name = name;
-        this.muscleGroups = muscleGroups;
+        this.excercies = excercies;
     }
     public String toString()
         {
